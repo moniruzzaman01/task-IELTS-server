@@ -19,7 +19,7 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
     await client.connect();
-    const taskCollection = client.db("to-do-list").collection("all-tasks");
+    const taskCollection = client.db("ToDoList").collection("all-tasks");
 
     app.post("/tasks", async (req, res) => {
       const task = req.body;
